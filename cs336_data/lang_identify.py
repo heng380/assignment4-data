@@ -12,6 +12,4 @@ def identify_language(text: str) -> Tuple[str, float]:
 
 
 if __name__ == "__main__":
-    labels, probs = (model.predict("hello", k=5))
-    print (labels)
-    print (probs)
+    

@@ -32,10 +32,12 @@ def run_mask_ips(text: str) -> tuple[str, int]:
 
 
 def run_classify_nsfw(text: str) -> tuple[Any, float]:
+    return identify_nsfw(text)
     raise NotImplementedError
 
 
 def run_classify_toxic_speech(text: str) -> tuple[Any, float]:
+    return identify_hatespeech(text)
     raise NotImplementedError
 
 
