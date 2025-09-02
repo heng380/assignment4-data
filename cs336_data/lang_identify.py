@@ -9,7 +9,3 @@ def identify_language(text: str) -> Tuple[str, float]:
     prob = float(probs[0])
 
     return lang, prob
-
-
-if __name__ == "__main__":
-    

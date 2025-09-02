@@ -168,3 +168,7 @@ cython_debug/
 
 webdata/
 cs336_data/sample
+*.gz
+*.txt
+*.bin
+*-log
