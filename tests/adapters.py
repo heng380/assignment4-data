@@ -6,6 +6,8 @@ from cs336_data.extract_text import extract_text
 from cs336_data.lang_identify import identify_language
 from cs336_data.idenifiable_text import *
 from cs336_data.gopher import * 
+from cs336_data.deduplication.exact_line_dedup import *
+from cs336_data.deduplication.minhash_dedup import *
 import fasttext
 
 def run_extract_text_from_html_bytes(html_bytes: bytes) -> str | None:
@@ -63,7 +65,8 @@ def run_gopher_quality_filter(text: str) -> bool:
 def run_exact_line_deduplication(
     input_files: list[os.PathLike], output_directory: os.PathLike
 ):
-    raise NotImplementedError
+    exact_line_dedup(input_files, output_directory)
+    # raise NotImplementedError
 
 
 def run_minhash_deduplication(
@@ -74,4 +77,5 @@ def run_minhash_deduplication(
     jaccard_threshold: float,
     output_directory: os.PathLike,
 ):
-    raise NotImplementedError
+    minhash_dedupe(input_files, num_hashes, num_bands, ngrams, jaccard_threshold, output_directory)
+    # raise NotImplementedError
